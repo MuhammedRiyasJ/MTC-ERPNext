@@ -1,0 +1,65 @@
+{%- from "templates/print_formats/standard_macros.html" import add_header -%}
+
+<div class="page-break">
+  
+<div class="row">
+  
+  <div class="col-md-12 heading">
+    <h2>MTC Request</h2>
+  </div>
+  <div class="col-md-12 photo">
+    <a href="{{doc.photo}}" target="_blank"><img src="{{doc.photo}}"></a>
+  </div>
+ 
+  <div class="col-md-12">
+        <table class="table table-condensed table-bordered" style="height: 300px;">
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>No :</b> {{doc.name}}</td>
+              <td><b>Item :</b>{{doc.item}}</td>
+              <td colspan="2"> <b>Item Name :</b>{{doc.item_name}}</td>
+            </tr>
+            <tr>
+              <td><b>Description :</b>{{doc.description}}</td>
+              <td><b>Origin :</b>{{doc.origin}}</td>
+              <td colspan="2"><b>Heat Number :</b>{{doc.heat_number}}</td>
+            </tr>
+            <tr>
+              <td><b>Size :</b>{{doc.size}}</td>
+              <td><b>Class :</b>{{doc.class}}</td>
+              <td><b>Schedule :</b>{{doc.schedule}}</td>
+              <td><b>Quantity :</b>{{doc.qty}}</td>
+            </tr>
+            <tr>
+              <td><b>Material for Valve :</b>{{doc.material_for_valve}}</td>
+              <td><b>Material for Disc :</b>{{doc.material_for_disc}}</td>
+              <td colspan="2"><b>Material for Stem :</b>{{doc.material_for_stem}}</td>
+            </tr>
+            <tr>
+              <td><b>Serial Number :</b>{{doc.serial_number}}</td>
+              <td><b>Manufacturing Date :</b>{{doc.manufacturing_date}}</td>
+              <td colspan="2"><b>Remarks :</b>{{doc.remarks}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+<style>
+  
+  div.heading{
+    text-align: center; 
+    margin-bottom: 20px;
+  }
+  div.photo{
+    text-align: center;
+  }
+  div.col-md-12{
+    width: 100%;
+    float: left;
+  }
+  div.col-md-6{
+    width: 50%;
+    float: left;
+  }
+</style>
